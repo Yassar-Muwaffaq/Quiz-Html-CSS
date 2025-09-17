@@ -1,0 +1,187 @@
+body {
+    background-color: #030303;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+nav {
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .profile .profile-info {
+    padding-left: 20px;
+    flex-direction: column;
+}
+
+nav .profile-pic {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid blue;
+}
+
+nav .menu {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 50%;
+    padding-top: 30px;
+}
+
+nav .menu a {
+    text-decoration: none;
+}
+
+nav .menu a:visited {
+    color: white;
+}
+
+nav .menu a:visited:hover {
+    color: #0000ff;
+    transition: 0.3s;
+}
+
+
+
+main .hero {
+    text-align: center;
+    padding: 50px;
+    font-size: 40px;
+}
+
+main .hero .main-text {
+    background: linear-gradient(to top, #00ffff, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+main .hero .sub-text {
+    font-size: 20px;
+    color: gray;
+    padding-top: 10px;
+}
+
+main .hero .contact-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid blue;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main .hero .contact-btn:hover {
+    background-color: blue;
+    transition: 0.4s;
+}
+
+main .hero .contact-btn:active {
+    background: rgb(157, 155, 245);
+    border-radius: 50px;
+}
+
+main .power {
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+}
+
+main .power .languange {
+    background: none;
+    width: 20rem;
+    display: flex;
+    border-radius: 30px;
+    border: 2px solid blue;
+}
+
+main .power .html-languange {
+    background: none;
+    width: 20rem;
+    display: flex;
+    border-radius: 30px;
+    border: 2px solid blue;
+}
+
+main .power .icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+main .power .css-languange {
+    background: none;
+    width: 20rem;
+    display: flex;
+    gap: 15px;
+    border-radius: 30px;
+    border: 2px solid blue;
+}
+
+main .power p {
+    padding-top: 20px;
+}
+
+main .power .css-languange .icon {
+    width: 70px;
+    padding-left: 10px;
+}
+
+main .power .left {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+@media (max-width:1024px) {
+
+    main .power .languange,
+    main .power .html-languange,
+    main .power .css-languange {
+        flex: 1 1 200px;
+        max-width: 20rem;
+        display: flex;
+        border-radius: 30px;
+        border: 2px solid blue;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width:768px) {
+    nav .menu {
+        display: none;
+    }
+
+    main .power .left {
+        display: flex;
+        flex-direction: row;
+    }
+
+    main .power {
+        display: flex;
+        justify-content: center;
+        /* rata tengah */
+        gap: 20px;
+        /* jarak antar div */
+        flex-wrap: wrap;
+        /* biar turun kalau layar kecil */
+    }
+
+
+
+}
