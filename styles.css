@@ -16,6 +16,8 @@ nav .profile {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    animation-name: slideToLeft ;
+    animation-duration: 3s;
 }
 
 nav .profile .profile-info {
@@ -66,6 +68,8 @@ main .hero .main-text {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    animation-name: fadeIn;
+    animation-duration: 2s;
 }
 
 main .hero .sub-text {
@@ -116,7 +120,10 @@ main .power .html-languange {
     border-radius: 30px;
     border: 2px solid blue;
 }
-
+main .power .left{
+    animation-name: slideToRight;
+    animation-duration: 3s;
+}
 main .power .icon {
     width: 100px;
     height: 100px;
@@ -141,9 +148,11 @@ main .power .css-languange .icon {
     padding-left: 10px;
 }
 
-main .power .left {
+main .power .right {
     display: flex;
     flex-direction: row-reverse;
+    animation-name: slideToLeft;
+    animation-duration: 3s;
 }
 
 
@@ -181,7 +190,40 @@ main .power .left {
         flex-wrap: wrap;
         /* biar turun kalau layar kecil */
     }
+}
 
+@keyframes fadeIn {
+    from {
+        margin-top: 0px;
+        opacity: 0%;
+    }
 
+    to {
+        margin-top: 50px;
+        opacity: 100%;
+    }
+}
 
+@keyframes slideToLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
